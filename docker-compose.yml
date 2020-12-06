@@ -1,0 +1,13 @@
+version: "2"
+services:
+  app:
+    image: golang:1.6.1-alpine
+    volumes:
+      - .:/mnt/c/Applications/wip/goclient   
+    working_dir: /mnt/c/Applications/wip/goclient
+    environment:
+      APP_BASE_URL: http://192.168.1.96:8000
+  
+    command: go test -v
+   
+     
